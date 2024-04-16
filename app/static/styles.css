@@ -1,0 +1,37 @@
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+th {
+    white-space: nowrap; /* Prevent text wrapping in header cells */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Display ellipsis for overflow text */
+}
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa; /* Set a background color for the sticky header */
+    z-index: 1; /* Ensure the sticky header is above the scrolling content */
+}
+
+.details-page {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+.details-page.active {
+    opacity: 1;
+    max-height: 1000px; /* Adjust based on your content height */
+}
+
+.pictureFrame {
+  display: flex; 
+  align-items: center;
+  flex-direction: column; 
+  flex: 0 0 25%; 
+  padding: 15px; 
+  box-sizing: border-box; 
+  border-right: 2px solid #ccc;
+  text-align: center;
+}
